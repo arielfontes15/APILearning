@@ -4,13 +4,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using RestAPI02.Data;
+using RestAPI02.Data.Context;
 using RestAPI02.Negocio;
 using RestAPI02.Negocio.Implementacoes;
 using RestAPI02.Repositorio;
 using RestAPI02.Repositorio.Implementacoes;
 using Serilog;
-using System;
 
 namespace RestAPI02
 {
@@ -32,8 +31,6 @@ namespace RestAPI02
         // This method gets called by the runtime. Use this method to add Negocio to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-
             services.AddControllers();
             services.AddDbContext<Context>();
 
@@ -42,8 +39,8 @@ namespace RestAPI02
 
             //Injecao de dependencia
             services.AddScoped<IPessoaNegocio, PessoaNegocioImplementacao>();
-            services.AddScoped<ILivroNegocio, LivroNegocioImplementacao>();
             services.AddScoped<IPessoaRepositorio, PessoaRepositorioImplementacao>();
+            services.AddScoped<ILivroNegocio, LivroNegocioImplementacao>();
             services.AddScoped<ILivroRepositorio, LivroRepositorioImplementacao>();
             services.AddSwaggerGen(c =>
             {

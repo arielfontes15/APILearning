@@ -9,7 +9,7 @@ namespace RestAPI02.Controllers
     [ApiVersion("1")]
     [ApiController]
     [Route("api/[controller]/v{version:apiVersion}")]
-    public class LivroController : Controller
+    public class LivroController : ControllerBase
     {
         private readonly ILogger<LivroController> _logger;
         private ILivroNegocio _livroNegocio;
@@ -39,7 +39,7 @@ namespace RestAPI02.Controllers
 
         [HttpPost]
         public IActionResult Post([FromBody] Livro livro)
-        {
+        {         
 
             if (livro == null)
                 return BadRequest();

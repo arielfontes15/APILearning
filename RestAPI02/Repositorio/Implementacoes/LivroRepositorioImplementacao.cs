@@ -1,4 +1,4 @@
-﻿using RestAPI02.Data;
+﻿using RestAPI02.Data.Context;
 using RestAPI02.Models;
 using System;
 using System.Collections.Generic;
@@ -34,7 +34,6 @@ namespace RestAPI02.Repositorio.Implementacoes
             }
             catch (Exception)
             {
-
                 throw;
             }
 

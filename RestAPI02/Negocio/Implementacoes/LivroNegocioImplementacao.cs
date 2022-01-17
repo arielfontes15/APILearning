@@ -1,6 +1,9 @@
-﻿using RestAPI02.Models;
+﻿using RestAPI02.Data;
+using RestAPI02.Models;
 using RestAPI02.Repositorio;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace RestAPI02.Negocio.Implementacoes
 {
@@ -34,5 +37,6 @@ namespace RestAPI02.Negocio.Implementacoes
         }
 
         public void Delete(long id) => _repositorio.Delete(id);
+
     }
 }

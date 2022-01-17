@@ -5,11 +5,12 @@ namespace RestAPI02.Repositorio
 {
     public interface ILivroRepositorio
     {
-        Livro Create(Livro livro);
+        List<Livro> FindAll();
         Livro FindByID(long id);
+        Livro Create(Livro livro);
         Livro Update(Livro livro);
         void Delete(long id);
+
         bool Exists(long id);
-        List<Livro> FindAll();
     }
 }

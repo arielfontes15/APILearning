@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RestAPI02.Data;
+using RestAPI02.Data.Context;
 using RestAPI02.Models.Base;
 using System;
 using System.Collections.Generic;
